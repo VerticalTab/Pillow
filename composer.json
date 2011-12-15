@@ -1,0 +1,16 @@
+{
+    "name": "VerticalTab/Pillow",
+    "type": "library",
+    "description": "Zillow PHP client",
+    "homepage": "https://github.com/VerticalTab/Pillow",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Rob Apodaca",
+          "email": "rob.apodaca@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

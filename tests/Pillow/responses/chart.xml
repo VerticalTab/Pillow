@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is Zillow's own example: http://www.zillow.com/howto/api/GetChart.htm
+-->
+<Chart:chart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.zillow.com/static/xsd/Chart.xsd" xmlns:Chart="http://www.zillow.com/static/xsd/Chart.xsd">
+  <request>
+    <zpid>48749425</zpid> 
+    <unit-type>percent</unit-type> 
+    <width>300</width> 
+    <height>150</height> 
+  </request>
+  <message>
+    <text>Request successfully processed</text> 
+    <code>0</code> 
+  </message>
+  <response>
+    <url>http://example.com</url> 
+  </response>
+</Chart:chart>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file is Zillow's own example: http://www.zillow.com/howto/api/GetComps.htm
+with some omissions
+-->
+<Comps:comps xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.zillow.com/static/xsd/Comps.xsd" xmlns:Comps="http://www.zillow.com/static/xsd/Comps.xsd">
+  <request>
+    <zpid>48749425</zpid> 
+    <count>5</count> 
+  </request>
+  <message>
+    <text>Request successfully processed</text> 
+    <code>0</code> 
+  </message>
+  <response>
+    <properties>
+      <principal>
+        <zpid>48749425</zpid> 
+        <address>
+          <street>2114 Bigelow Ave N</street> 
+          <zipcode>98109</zipcode> 
+          <city>SEATTLE</city> 
+          <state>WA</state> 
+          <latitude>47.637934</latitude> 
+          <longitude>-122.347936</longitude> 
+        </address>
+        <zestimate>
+          <amount currency="USD">1124072</amount> 
+          <last-updated>09/01/2006</last-updated> 
+          <oneWeekChange currency="USD">25563</oneWeekChange> 
+          <valuationRange>
+            <low currency="USD">966702</low> 
+            <high currency="USD">1236479</high> 
+          </valuationRange>
+          <percentile>93</percentile> 
+        </zestimate>
+      </principal>
+      <comparables>
+        <comp score="0.257106811263241">
+          <zpid>48749459</zpid> 
+          <address>
+            <street>2021 5th Ave N</street> 
+            <zipcode>98109</zipcode> 
+            <city>SEATTLE</city> 
+            <state>WA</state> 
+            <latitude>47.637253</latitude> 
+            <longitude>-122.347385</longitude> 
+          </address>
+          <zestimate>
+            <amount currency="USD">985000</amount> 
+            <last-updated>09/01/2006</last-updated> 
+            <oneWeekChange currency="USD">140007</oneWeekChange> 
+            <valuationRange>
+              <low currency="USD">847100</low> 
+              <high currency="USD">1083500</high> 
+            </valuationRange>
+            <percentile /> 
+          </zestimate>
+        </comp>
+        <comp score="0.31179534464349695">
+          <zpid>48749409</zpid> 
+          <address>
+            <street>2208 Bigelow Ave N</street> 
+            <zipcode>98109</zipcode> 
+            <city>SEATTLE</city> 
+            <state>WA</state> 
+            <latitude>47.638543</latitude> 
+            <longitude>-122.348008</longitude> 
+          </address>
+          <zestimate>
+            <amount currency="USD">1326256</amount> 
+            <last-updated>09/01/2006</last-updated> 
+            <oneWeekChange currency="USD">269</oneWeekChange> 
+            <valuationRange>
+              <low currency="USD">1140580</low> 
+              <high currency="USD">1458882</high> 
+            </valuationRange>
+            <percentile /> 
+          </zestimate>
+        </comp>
+        <comp score="0.35103815285082135">
+          <zpid>48690116</zpid> 
+          <address>
+            <street>2009-1/2 4th Ave N</street> 
+            <zipcode>98109</zipcode> 
+            <city>SEATTLE</city> 
+            <state>WA</state> 
+            <latitude>47.636845</latitude> 
+            <longitude>-122.349886</longitude> 
+          </address>
+          <zestimate>
+            <amount currency="USD">1096712</amount> 
+            <last-updated>09/01/2006</last-updated> 
+            <oneWeekChange currency="USD">222</oneWeekChange> 
+            <valuationRange>
+              <low currency="USD">943172</low> 
+              <high currency="USD">1206383</high> 
+            </valuationRange>
+            <percentile /> 
+          </zestimate>
+        </comp>
+        <comp score="0.3738944725221039">
+          <zpid>48690106</zpid> 
+          <address>
+            <street>1920 4th Ave N</street> 
+            <zipcode>98109</zipcode> 
+            <city>SEATTLE</city> 
+            <state>WA</state> 
+            <latitude>47.636392</latitude> 
+            <longitude>-122.349243</longitude> 
+          </address>
+          <zestimate>
+            <amount currency="USD">942362</amount> 
+            <last-updated>09/01/2006</last-updated> 
+            <oneWeekChange currency="USD">-16139</oneWeekChange> 
+            <valuationRange>
+              <low currency="USD">810431</low> 
+              <high currency="USD">1036598</high> 
+            </valuationRange>
+            <percentile /> 
+          </zestimate>
+        </comp>
+        <comp score="0.40222697483306563">
+          <zpid>48878959</zpid> 
+          <address>
+            <street>2407 4th Ave N</street> 
+            <zipcode>98109</zipcode> 
+            <city>SEATTLE</city> 
+            <state>WA</state> 
+            <latitude>47.64023</latitude> 
+            <longitude>-122.34988</longitude> 
+          </address>
+          <zestimate>
+            <amount currency="USD">1163280</amount> 
+            <last-updated>09/01/2006</last-updated> 
+            <oneWeekChange currency="USD">-7330</oneWeekChange> 
+            <valuationRange>
+              <low currency="USD">1000421</low> 
+              <high currency="USD">1279608</high> 
+            </valuationRange>
+            <percentile /> 
+          </zestimate>
+        </comp>
+      </comparables>
+    </properties>
+  </response>
+</Comps:comps>
