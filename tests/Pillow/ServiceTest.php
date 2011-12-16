@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-use Pillow\Service;
+use VerticalTab\Pillow\Service;
 
 class ServiceTest extends PHPUnit_Framework_TestCase
 {
@@ -13,7 +13,7 @@ class ServiceTest extends PHPUnit_Framework_TestCase
   public $mockHttpClient;
   
   public function setUp() {
-    $this->mockHttpClient = $this->getMock('\Pillow\HttpClient');
+    $this->mockHttpClient = $this->getMock('\VerticalTab\Pillow\HttpClient');
     $this->service = new Service('foo', $this->mockHttpClient);
     
   }
@@ -37,7 +37,7 @@ class ServiceTest extends PHPUnit_Framework_TestCase
     $results = $this->service->getSearchResults($address, $zip);
     
     $this->assertEquals(1, count($results));
-    $this->assertInstanceOf('\Pillow\Property', $results->current());
+    $this->assertInstanceOf('\VerticalTab\Pillow\Property', $results->current());
   }
   
   /**
@@ -60,7 +60,7 @@ class ServiceTest extends PHPUnit_Framework_TestCase
     
     $chart = $this->service->getChart($zpid, $width, $height, $unitType, $chartDuration);
     
-    $this->assertInstanceOf('\Pillow\Chart', $chart);
+    $this->assertInstanceOf('\VerticalTab\Pillow\Chart', $chart);
   }
   
   /**

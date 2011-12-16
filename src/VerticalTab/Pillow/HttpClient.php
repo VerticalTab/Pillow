@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-namespace Pillow;
+namespace VerticalTab\Pillow;
 
 use \Exception;
 

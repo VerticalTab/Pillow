@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2009, Rob Apodaca
  */
 
-namespace Pillow;
+namespace VerticalTab\Pillow;
 
 class Property
 {

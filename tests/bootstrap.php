@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-namespace PillowTest;
+namespace VerticalTab\PillowTest;
 
 class Autoloader
 {

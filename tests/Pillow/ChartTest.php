@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-use Pillow\Chart;
+use VerticalTab\Pillow\Chart;
 
 class ChartTest extends PHPUnit_Framework_TestCase
 {

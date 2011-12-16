@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-namespace Pillow;
+namespace VerticalTab\Pillow;
 
 class Service
 {
@@ -50,7 +50,7 @@ class Service
          . 'address='      . urlencode( $address ) . '&'
          . 'citystatezip=' . urlencode( $cityStateZip );
     
-    return $this->fetch($url, 'Pillow\SearchResults');
+    return $this->fetch($url, 'VerticalTab\Pillow\SearchResults');
   }
   
   /**
@@ -72,7 +72,7 @@ class Service
          . 'height='         . $height . '&'
          . 'chartDuration='  . $chartDuration;
     
-    return $this->fetch($url, 'Pillow\Chart');
+    return $this->fetch($url, 'VerticalTab\Pillow\Chart');
   }
   
   /**
@@ -89,7 +89,7 @@ class Service
          . 'count='     . $count
          ;
     
-    return $this->fetch($url, 'Pillow\Comps');
+    return $this->fetch($url, 'VerticalTab\Pillow\Comps');
   }
   
   /**

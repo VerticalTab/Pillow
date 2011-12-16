@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-use Pillow\Zestimate;
+use VerticalTab\Pillow\Zestimate;
 
 class ZestimateTest extends PHPUnit_Framework_TestCase
 {
@@ -23,6 +23,6 @@ class ZestimateTest extends PHPUnit_Framework_TestCase
     $this->assertEquals('11/03/2009', $z->lastUpdated);
     $this->assertEquals('-41500', $z->thirtyDayChange);
     $this->assertEquals('0', $z->percentile);
-    $this->assertInstanceOf('\Pillow\Range', $z->range);
+    $this->assertInstanceOf('\VerticalTab\Pillow\Range', $z->range);
   }
 }

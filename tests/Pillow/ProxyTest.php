@@ -4,13 +4,13 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-use Pillow\Service;
-use Pillow\Proxy;
+use VerticalTab\Pillow\Service;
+use VerticalTab\Pillow\Proxy;
 
 class ProxyTest extends PHPUnit_Framework_TestCase
 {
   public function setUp() {
-    $this->mockHttpClient = $this->getMock('\Pillow\HttpClient');
+    $this->mockHttpClient = $this->getMock('\VerticalTab\Pillow\HttpClient');
     $this->service = new Service('foo', $this->mockHttpClient);
     
   }

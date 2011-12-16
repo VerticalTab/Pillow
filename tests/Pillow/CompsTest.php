@@ -4,8 +4,8 @@
  * @copyright Copyright (c) 2011, Rob Apodaca
  */
 
-use Pillow\Comps;
-use Pillow\Service;
+use VerticalTab\Pillow\Comps;
+use VerticalTab\Pillow\Service;
 
 class CompsTest extends PHPUnit_Framework_TestCase
 {
@@ -14,7 +14,7 @@ class CompsTest extends PHPUnit_Framework_TestCase
   public $mockHttpClient;
   
   public function setUp() {
-    $this->mockHttpClient = $this->getMock('\Pillow\HttpClient');
+    $this->mockHttpClient = $this->getMock('\VerticalTab\Pillow\HttpClient');
     $this->service = new Service('foo', $this->mockHttpClient);
     
   }
