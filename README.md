@@ -6,6 +6,7 @@ This library provides a PHP interface for the Zillow API.
 See: [zillow.com](http://www.zillow.com/howto/api/APIOverview.htm) for more information.
 
 Currently, only these API calls are supported:
+
 http://www.zillow.com/howto/api/GetSearchResults.htm
 http://www.zillow.com/howto/api/GetChart.htm
 http://www.zillow.com/howto/api/GetComps.htm
