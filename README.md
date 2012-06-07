@@ -5,6 +5,15 @@ This library provides a PHP interface for the Zillow API.
 
 See: [zillow.com](http://www.zillow.com/howto/api/APIOverview.htm) for more information.
 
+Currently, only these API calls are supported:
+http://www.zillow.com/howto/api/GetSearchResults.htm
+http://www.zillow.com/howto/api/GetChart.htm
+http://www.zillow.com/howto/api/GetComps.htm
+
+If there is one you'd really like to see implemented, you can create an 
+[issue](https://github.com/VerticalTab/Pillow/issues) and/or fork, implement,
+and submit a pull request.
+
 Requirements
 ------------
 
