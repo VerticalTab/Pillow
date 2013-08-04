@@ -56,7 +56,7 @@ Examples
 File: simple.php
 
     <?php
-    require 'vendor/.composer/autoload.php';
+    require 'vendor/autoload.php';
     
     use VerticalTab\Pillow\Service;
     
@@ -76,7 +76,7 @@ Run simple example
 File: chart.php
 
     <?php
-    require 'vendor/.composer/autoload.php';
+    require 'vendor/autoload.php';
     
     use VerticalTab\Pillow\Service;
     
@@ -94,7 +94,7 @@ Run chart example:
 File: comps.php
 
     <?php
-    require 'vendor/.composer/autoload.php';
+    require 'vendor/autoload.php';
 
     use VerticalTab\Pillow\Service;
 
