@@ -52,6 +52,15 @@ class Service
     
     return $this->fetch($url, 'VerticalTab\Pillow\SearchResults');
   }
+
+  public function getDeepSearchResults($address, $cityStateZip) {
+    $url = '/webservice/GetDeepSearchResults.htm?'
+         . 'zws-id='       . $this->zwsId . '&'
+         . 'address='      . urlencode( $address ) . '&'
+         . 'citystatezip=' . urlencode( $cityStateZip );
+
+    return $this->fetch($url, 'VerticalTab\Pillow\DeepSearchResults');
+  }
   
   /**
    * Gets Chart http://www.zillow.com/howto/api/GetChart.htm

@@ -170,4 +170,51 @@ class Property
     
     return $prop;
   }
+
+  public static function createFromXmlDeep($xml, $service) {
+    $prop = new Property();
+    
+    $prop->zpid = Xml::xstring($xml, 'zpid');
+    $prop->street = Xml::xstring($xml, 'address/street');
+    $prop->zipcode = Xml::xstring($xml, 'address/zipcode');
+    $prop->city = Xml::xstring($xml, 'address/city');
+    $prop->state = Xml::xstring($xml, 'address/state');
+    $prop->latitude = Xml::xstring($xml, 'address/latitude');
+    $prop->longitude = Xml::xstring($xml, 'address/longitude');
+
+    $prop->fipsCounty = Xml::xstring($xml, 'FIPScounty');
+    $prop->useCode = Xml::xstring($xml, 'useCode');
+    $prop->yearBuilt = Xml::xstring($xml, 'yearBuilt');
+    $prop->lotSizeSqFt = Xml::xstring($xml, 'lotSizeSqFt');
+    $prop->finishedSqFt = Xml::xstring($xml, 'finishedSqFt');
+    $prop->bathrooms = Xml::xstring($xml, 'bathrooms');
+    $prop->bedrooms = Xml::xstring($xml, 'bedrooms');
+    $prop->lastSoldDate = Xml::xstring($xml, 'lastSoldDate');
+    $prop->lastSoldPrice = Xml::xstring($xml, 'lastSoldPrice');
+    
+    $links = $xml->xpath('links');
+    if(count($links) == 1) {
+      $prop->links = Links::createFromXml($links[0]);
+    }
+    
+    $zestimates = $xml->xpath('zestimate');
+    if(count($zestimates) == 1) {
+      $prop->zestimate = Zestimate::createFromXml($zestimates[0]);
+    }
+    
+    $prop->chart = new Proxy($service, 'getChart', array(
+        $prop->zpid, 
+        Chart::getDefaultWidth(), 
+        Chart::getDefaultHeight(), 
+        Chart::getDefaultUnitType(), 
+        Chart::getDefaultDuration()
+    ));
+    
+    $prop->comps = new Proxy($service, 'getComps', array(
+        $prop->zpid, 
+        Comps::getDefaultCompCount()
+    ));
+    
+    return $prop;
+  }
 }
