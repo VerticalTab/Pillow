@@ -31,33 +31,24 @@ class HttpClient
    * @return \SimpleXMLElement 
    */
   public function get($url) {
-    $body = '';
-    
-    $fp = @fsockopen($this->host, 80, $errno, $errstr);
-    if(!$fp) {
-      $msg = "Failed to open connection {$this->host} $errno $errstr";
-      throw new Exception($msg);
+    $opts = ['http' =>
+      [
+        'method'  => 'GET',
+        'header'  => $this->buildHeader($url),
+      ]
+    ];
+    $context  = stream_context_create($opts);
+
+    $body = file_get_contents('http://'.$this->host.$url, false, $context);
+    if($body === false) {
+        throw new Exception('Unable to retrieve results');
     }
-    
-    fwrite($fp, $this->buildHeader($url));
-    $headerFound = false;
-    while(!feof($fp)) {
-      $line = fgets($fp);
-      if($line === "\r\n") {
-        $headerFound = true;
-        $line = '';
-      }
-      if($headerFound) {
-        $body .= $line;
-      }
-    }
-    fclose($fp);
-    
+
     $xml = @simplexml_load_string($body);
     if(!$xml) {
       throw new Exception('Unable to load xml result');
     }
-    
+
     return $xml;
   }
   
@@ -68,9 +59,7 @@ class HttpClient
    * @return string
    */
   private function buildHeader($url) {
-    $head = "GET $url HTTP/1.1\r\n"
-          . "Host: {$this->host}\r\n"
-          . "Content-type: text/xml\r\n"
+    $head = "Content-type: text/xml\r\n"
           . "Connection: Close\r\n";
     return $head . "\r\n";
   }
