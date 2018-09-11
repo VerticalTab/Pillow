@@ -48,7 +48,8 @@ class Zestimate
       $z->percentile = Xml::xstring($xml, 'percentile');
       
       $ranges = $xml->xpath('valuationRange');
-      if(count($ranges == 1)) {
+
+      if(is_array($ranges) && count($ranges) == 1) {
         $z->range = Range::createFromXml($ranges[0]);
       }
       
